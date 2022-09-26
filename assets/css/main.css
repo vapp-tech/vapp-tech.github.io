@@ -1558,6 +1558,7 @@ input, select, textarea {
 		.image.fit {
 			display: block;
 			width: 100%;
+			text-align: center;
 		}
 
 		.image.featured {
@@ -2006,7 +2007,7 @@ input, select, textarea {
 					-webkit-flex-shrink: 0;
 					-ms-flex-shrink: 0;
 					flex-shrink: 0;
-					width: 17em;
+					width: 20em;
 					height: 100%;
 				}
 
@@ -2189,3 +2190,42 @@ input, select, textarea {
 			}
 
 		}
+/* Summary */
+details > summary {
+	list-style-type:none;
+	padding: 4px;
+	width: 200px;
+	background-color: #ffffff;
+	border: none;
+	/*box-shadow: 1px 1px 2px #bbbbbb;*/
+	cursor: pointer;
+	text-align: center;
+	align-items:stretch;
+	font-size: smaller;
+	font-weight: bold;
+  }
+
+  details > p {
+	background-color: #ffffff;
+	padding: 4px;
+	margin: 0;
+	box-shadow: 2px 1px 2px #bbbbbb;
+	text-align: center;
+	font-size: smaller;
+  }
+
+  details>summary::-webkit-details-marker {
+	display: none;
+  }
+
+  details>summary::before {
+	content: '+ ';
+  }
+
+  details[open]>summary::before {
+	content: '- ';
+  }
+
+  details[open]>summary {
+	margin-bottom: 0.5rem;
+  }
